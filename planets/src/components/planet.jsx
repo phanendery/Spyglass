@@ -63,10 +63,10 @@ export default function Planet({ planet }) {
         <Typography variant="h5">
           Residents:
           {planet.residents.length === 0 ? (
-            <Typography variant="h6">Unknown</Typography>
+            <Typography>Unknown</Typography>
           ) : (
-            planet.residents.map((resident) => (
-              <Typography variant="h6">{resident}</Typography>
+            planet.residents.map((resident, i) => (
+              <Typography key={i}>{resident}</Typography>
             ))
           )}
         </Typography>
