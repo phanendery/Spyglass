@@ -51,10 +51,11 @@ export default function Home() {
 
   // Fetching all planets because the call is only 60 right now. If it was more, I would handle this differently.
   useEffect(() => {
-    console.log("hitting here");
     async function fetchPlanets() {
       try {
-        const response = await fetch("https://swapi.dev/api/planets/");
+        const response = await fetch(
+          "https://cors-anywhere.herokuapp.com/https://swapi.dev/api/planets/"
+        );
         const data = await response.json();
         const allPlanets = await Promise.all(
           data.results.map(async (planet) => {
@@ -81,7 +82,9 @@ export default function Home() {
     const residents = await Promise.all(
       residentUrls.map(async (url) => {
         try {
-          const response = await fetch(url);
+          const response = await fetch(
+            `https://cors-anywhere.herokuapp.com/${url}`
+          );
           const data = await response.json();
           return data.name;
         } catch (error) {
@@ -108,6 +111,8 @@ export default function Home() {
   const handleEvent = (e, value) => {
     setSelectedPlanet(value);
   };
+
+  console.log(planets);
 
   return (
     <AppContainer>
