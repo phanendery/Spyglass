@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Spyglass/static/css/main.3e03a415.css",
+    "main.js": "/Spyglass/static/js/main.47966043.js",
+    "static/media/background.png": "/Spyglass/static/media/background.c44ed04c57064dd1b4d5.png",
+    "index.html": "/Spyglass/index.html",
+    "main.3e03a415.css.map": "/Spyglass/static/css/main.3e03a415.css.map",
+    "main.47966043.js.map": "/Spyglass/static/js/main.47966043.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e03a415.css",
+    "static/js/main.47966043.js"
+  ]
+}
